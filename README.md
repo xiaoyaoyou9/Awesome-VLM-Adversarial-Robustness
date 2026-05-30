@@ -268,7 +268,7 @@ No training — defend at inference using only the test input and pre-trained VL
 |:--:|:--|:--|:--:|:--:|:--:|
 | 2021 | HD | Attacking adversarial attacks as a defense <br/><sub>hedge defense — attack all classes</sub> | arXiv'21 | [📄](https://arxiv.org/abs/2106.04938) | — |
 | 2022 | Anti-Adv | Combating adversaries with anti-adversaries <br/><sub>anti-adversary input layer</sub> | AAAI'22 | [📄](https://arxiv.org/abs/2103.14347) | [💻](https://github.com/MotasemAlfarra/Combating-Adversaries-with-Anti-Adversaries) |
-| 2021 | TTE | Enhancing adversarial robustness via test-time transformation ensembling | ICCV'21 | [📄](https://arxiv.org/abs/2107.14110) | [💻](https://github.com/juancprzs/TTE) |
+| 2021 | TTE | Enhancing adversarial robustness via test-time transformation ensembling | ICCVW'21 | [📄](https://arxiv.org/abs/2107.14110) | [💻](https://github.com/juancprzs/TTE) |
 
 #### Test-Time Prompt Tuning
 
