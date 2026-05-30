@@ -1,0 +1,10 @@
+# This folder holds repository figures (taxonomy tree, evolution timeline, MLLM
+# defense pipeline, attack-vs-defense overview), drawn in draw.io and exported here.
+#
+# Planned files (referenced from README once added):
+#   fig1_taxonomy.png        - master taxonomy tree of all 7 categories
+#   fig2_aft_genealogy.png   - AFT method genealogy
+#   fig3_apt_genealogy.png   - APT / FAP family tree
+#   fig4_ttd_genealogy.png   - TTD genealogy
+#   fig5_mllm_pipeline.png   - MLLM three-stage defense pipeline
+#   fig6_timeline.png        - 2021-2026 method-evolution timeline
