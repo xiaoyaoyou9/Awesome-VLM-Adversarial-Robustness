@@ -70,7 +70,7 @@ The eight methods every robustness paper compares against — identified by **ba
 | **APT** · Text-prompt | [APT](#apt-family-text-prompt-centric) | One prompt word boosts robustness | CVPR'24 | 6/12 |
 | **APT** · Multi-modal | [FAP](#fap-family-multi-modal-prompt-centric) | Few-shot adversarial prompts + TRADES loss | NeurIPS'24 | 5/12 |
 | **TTD** · Prompt-tuning | [R-TPT](#test-time-prompt-tuning) | Test-time prompt tuning, entropy + reliability | CVPR'25 | 8/17 |
-| **TTD** · Counterattack | [TTC](#counterattack) | First training-free counterattack for CLIP | CVPR'24 | 9/17 |
+| **TTD** · Counterattack | [TTC](#counterattack) | First training-free counterattack for CLIP | CVPR'25 | 9/17 |
 | **TTD** · Embedding | [AOM](#embedding-space-defense) | Anchor-guided one-step move (training-free SoTA) | CVPR'25 | — |
 
 > 💡 New to the field? Read these eight first, then branch into the sub-family that matches your compute budget (AFT → APT → TTD → Certified, cheapest defense effort last).
@@ -99,7 +99,7 @@ Key models and prior art that the robustness literature builds on.
 | 2022 | CoCoOp | Conditional prompt learning for vision-language models <br/><sub>conditional prompts</sub> | CVPR'22 | [📄](https://arxiv.org/abs/2203.05557) | [💻](https://github.com/KaiyangZhou/CoOp) |
 | 2023 | MaPLe | Maple: Multi-modal prompt learning | CVPR'23 | [📄](https://arxiv.org/abs/2210.03117) | [💻](https://github.com/muzairkhattak/multimodal-prompt-learning) |
 | 2022 | TPT | Test-time prompt tuning for zero-shot generalization in vision-language models | NeurIPS'22 | [📄](https://arxiv.org/abs/2209.07511) | [💻](https://github.com/azshue/TPT) |
-| 2024 | CLIP-LoRA | Low-rank few-shot adaptation of vision-language models | CVPR'24 | [📄](https://arxiv.org/abs/2405.18541) | [💻](https://github.com/MaxZanella/CLIP-LoRA) |
+| 2024 | CLIP-LoRA | Low-rank few-shot adaptation of vision-language models | CVPRW'24 | [📄](https://arxiv.org/abs/2405.18541) | [💻](https://github.com/MaxZanella/CLIP-LoRA) |
 | 2024 | MTA | On the test-time zero-shot generalization of vision-language models: Do we really need prompt learning? <br/><sub>training-free test-time augmentation</sub> | CVPR'24 | [📄](https://arxiv.org/abs/2405.02266) | [💻](https://github.com/MaxZanella/MTA) |
 
 #### Adversarial-robustness foundations
@@ -122,7 +122,7 @@ Attacks define the threat each defense targets — by modality (image / text / m
 | 2015 | FGSM | Explaining and harnessing adversarial examples <br/><sub>fast gradient sign method</sub> | ICLR'15 | [📄](https://arxiv.org/abs/1412.6572) | — |
 | 2018 | PGD | Towards deep learning models resistant to adversarial attacks <br/><sub>projected gradient descent</sub> | ICLR'18 | [📄](https://arxiv.org/abs/1706.06083) | [💻](https://github.com/MadryLab/mnist_challenge) |
 | 2020 | AutoAttack | Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks <br/><sub>parameter-free ensemble; eval gold-standard</sub> | ICML'20 | [📄](https://arxiv.org/abs/2003.01690) | [💻](https://github.com/fra31/auto-attack) |
-| 2023 | APGD-VLM | On the adversarial robustness of multi-modal foundation models <br/><sub>captioning attack on generative VLMs</sub> | ICCV'23 | [📄](https://arxiv.org/abs/2308.10741) | — |
+| 2023 | APGD-VLM | On the adversarial robustness of multi-modal foundation models <br/><sub>captioning attack on generative VLMs</sub> | ICCVW'23 | [📄](https://arxiv.org/abs/2308.10741) | — |
 | 2024 | VisualAdv | Visual adversarial examples jailbreak aligned large language models <br/><sub>single image jailbreaks aligned MLLMs</sub> | AAAI'24 | [📄](https://arxiv.org/abs/2306.13213) | [💻](https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models) |
 | 2026 | VEAttack | VEAttack: Downstream-agnostic Vision Encoder Attack against Large Vision Language Models <br/><sub>encoder-level, downstream/LLM-agnostic</sub> | ICLR'26 | [📄](https://arxiv.org/abs/2505.17440) | [💻](https://github.com/hefeimei06/VEAttack-LVLM) |
 
@@ -165,7 +165,7 @@ Modify model weights by training on adversarial examples. Three pillars — **Te
 | 2025 | QT-AFT | Quality Text, Robust Vision: The Role of Language in Enhancing Visual Robustness of Vision-Language Models <br/><sub>→ TeCoA; caption-guided text supervision</sub> | ACM MM'25 | [📄](https://arxiv.org/abs/2507.16257) | — |
 | 2026 | SAFT | Semantic-aware Adversarial Fine-tuning for CLIP <br/><sub>→ QT-AFT; semantic-aware AE generation</sub> | TMLR'26 | [📄](https://arxiv.org/abs/2602.12461) | [💻](https://github.com/tmlr-group/SAFT) |
 | 2026 | AGFT | AGFT: Alignment-Guided Fine-Tuning for Zero-Shot Adversarial Robustness of Vision-Language Models <br/><sub>→ PMG-AFT; distribution-consistency calibration</sub> | CVPR'26 | [📄](https://arxiv.org/abs/2603.29410) | [💻](https://github.com/YuboCui/AGFT) |
-| 2025 | RCSD | On enhancing adversarial robustness of large pre-trained vision-language models <br/><sub>label-free correlation self-distillation</sub> | ICASSP'25 | [📄](https://doi.org/10.1145/3709026.3709059) | — |
+| 2024 | RCSD | On enhancing adversarial robustness of large pre-trained vision-language models <br/><sub>label-free correlation self-distillation</sub> | CSAI'24 | [📄](https://doi.org/10.1145/3709026.3709059) | — |
 | 2025 | CAW | Zero-Shot Robustness of Vision Language Models Via Confidence-Aware Weighting <br/><sub>confidence-aware hard-example weighting</sub> | NeurIPSW'25 | [📄](https://arxiv.org/abs/2510.02913) | — |
 | 2025 | AdvSimplex | Improving zero-shot adversarial robustness in vision-language models by closed-form alignment of adversarial path simplices <br/><sub>closed-form simplex path alignment</sub> | ICML'25 | [📄](https://proceedings.mlr.press/v267/dong25f.html) | — |
 
@@ -283,7 +283,7 @@ No training — defend at inference using only the test input and pre-trained VL
 
 | Year | Method | Title | Venue | Paper | Code |
 |:--:|:--|:--|:--:|:--:|:--:|
-| 2024 | **TTC** ⭐ | CLIP is Strong Enough to Fight Back: Test-time Counterattacks towards Zero-shot Adversarial Robustness of CLIP <br/><sub>first training-free counterattack for CLIP (9/17)</sub> | CVPR'24 | [📄](https://arxiv.org/abs/2503.03613) | [💻](https://github.com/Sxing2/CLIP-Test-time-Counterattacks) |
+| 2025 | **TTC** ⭐ | CLIP is Strong Enough to Fight Back: Test-time Counterattacks towards Zero-shot Adversarial Robustness of CLIP <br/><sub>first training-free counterattack for CLIP (9/17)</sub> | CVPR'25 | [📄](https://arxiv.org/abs/2503.03613) | [💻](https://github.com/Sxing2/CLIP-Test-time-Counterattacks) |
 | 2026 | DOC | Diversifying Counterattacks: Orthogonal Exploration for Robust CLlP Inference <br/><sub>→ TTC; orthogonal diversified counterattack</sub> | AAAI'26 | [📄](https://arxiv.org/abs/2511.09064) | [💻](https://github.com/bookman233/DOC) |
 | 2025 | FPT-Noise | FPT-Noise: Dynamic Scene-Aware Counterattack for Test-Time Adversarial Defense in Vision-Language Models <br/><sub>→ TTC; dynamic scene-aware modulation</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2510.20856) | — |
 | 2025 | SCC | Self-Calibrated Consistency can Fight Back for Adversarial Robustness in Vision-Language Models <br/><sub>→ TTC; self-calibrated consistency (+text)</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2510.22785) | — |
@@ -297,7 +297,7 @@ No training — defend at inference using only the test input and pre-trained VL
 | 2025 | **AOM** ⭐ | On the Zero-Shot Adversarial Robustness of Vision-Language Models: A Truly Zero-Shot and Training-Free Approach <br/><sub>anchor-guided one-step move; SoTA training-free</sub> | CVPR'25 | [📄](https://openaccess.thecvf.com/content/CVPR2025/papers/Tong_On_the_Zero-shot_Adversarial_Robustness_of_Vision-Language_Models_A_Truly_CVPR_2025_paper.pdf) | — |
 | 2026 | CSR | Contrastive Spectral Rectification: Test-Time Defense towards Zero-shot Adversarial Robustness of CLIP | arXiv'26 | [📄](https://arxiv.org/abs/2601.19210) | [💻](https://github.com/Summu77/CSR) |
 | 2026 | DBD | Adversarial attacks already tell the answer: Directional bias-guided test-time defense for vision-language models <br/><sub>directional bias-guided two-stream</sub> | ICLR'26 | [📄](https://openreview.net/forum?id=UqC2oFRRyc) | — |
-| 2026 | COLA | Enhancing clip robustness via cross-modality alignment <br/><sub>cross-modality alignment + optimal transport</sub> | NeurIPS'26 | [📄](https://arxiv.org/abs/2510.24038) | — |
+| 2025 | COLA | Enhancing clip robustness via cross-modality alignment <br/><sub>cross-modality alignment + optimal transport</sub> | NeurIPS'25 | [📄](https://arxiv.org/abs/2510.24038) | — |
 | 2026 | ET3 | A Provable Energy-Guided Test-Time Defense Boosting Adversarial Robustness of Large Vision-Language Models <br/><sub>energy-guided (also certified; +MLLM)</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2603.26984) | [💻](https://github.com/OmnAI-Lab/Energy-Guided-Test-Time-Defense) |
 | 2025 | ATAC | ATAC: Augmentation-Based Test-Time Adversarial Correction for CLIP <br/><sub>augmentation-drift correction (lightweight)</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2511.17362) | [💻](https://github.com/kylin0421/ATAC) |
 
@@ -305,10 +305,10 @@ No training — defend at inference using only the test input and pre-trained VL
 
 | Year | Method | Title | Venue | Paper | Code |
 |:--:|:--|:--|:--:|:--:|:--:|
-| 2025 | CLIPure | Clipure: Purification in latent space via clip for adversarially robust zero-shot classification <br/><sub>purification in CLIP latent space</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2502.18176) | [💻](https://github.com/ZhangMingKun1/CLIPure) |
+| 2025 | CLIPure | Clipure: Purification in latent space via clip for adversarially robust zero-shot classification <br/><sub>purification in CLIP latent space</sub> | ICLR'25 | [📄](https://arxiv.org/abs/2502.18176) | [💻](https://github.com/ZhangMingKun1/CLIPure) |
 | 2025 | DiffCAP | Diffcap: Diffusion-based cumulative adversarial purification for vision language models <br/><sub>→ CLIPure; cumulative purification</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2506.03933) | — |
 | 2025 | CoDefend | CoDefend: Cross-Modal Collaborative Defense via Diffusion Purification and Prompt Optimization <br/><sub>fine-tuned diffusion + prompt opt (MLLM)</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2510.11096) | — |
-| 2024 | MirrorCheck | Mirrorcheck: Efficient adversarial defense for vision-language models <br/><sub>T2I regeneration detection</sub> | arXiv'24 | [📄](https://arxiv.org/abs/2406.09250) | — |
+| 2024 | MirrorCheck | Mirrorcheck: Efficient adversarial defense for vision-language models <br/><sub>T2I regeneration detection</sub> | NeurIPS'24 | [📄](https://arxiv.org/abs/2406.09250) | — |
 
 #### MLLM-Specific (test-time)
 
@@ -371,7 +371,7 @@ Generative MLLMs add a three-stage attack surface (vision encoder → alignment 
 | Year | Method | Title | Venue | Paper | Code |
 |:--:|:--|:--|:--:|:--:|:--:|
 | 2025 | CoDefend | CoDefend: Cross-Modal Collaborative Defense via Diffusion Purification and Prompt Optimization <br/><sub>diffusion purification + prompt optimization</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2510.11096) | — |
-| 2024 | MirrorCheck | Mirrorcheck: Efficient adversarial defense for vision-language models <br/><sub>T2I-regeneration detection (training-free)</sub> | arXiv'24 | [📄](https://arxiv.org/abs/2406.09250) | — |
+| 2024 | MirrorCheck | Mirrorcheck: Efficient adversarial defense for vision-language models <br/><sub>T2I-regeneration detection (training-free)</sub> | NeurIPS'24 | [📄](https://arxiv.org/abs/2406.09250) | — |
 | 2026 | PDA | PDA: Text-Augmented Defense Framework for Robust Vision-Language Models against Adversarial Image Attacks <br/><sub>query-level paraphrase aggregation</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2604.01010) | — |
 | 2026 | OCRA | ORCA: An Agentic Reasoning Framework for Hallucination and Adversarial Robustness in Vision-Language Models <br/><sub>agentic cross-validation</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2509.15435) | — |
 
@@ -382,7 +382,7 @@ Generative MLLMs add a three-stage attack surface (vision encoder → alignment 
 | 2024 | LMM-Robustness | On the robustness of large multimodal models against image adversarial attacks <br/><sub>study: large multimodal models vs image attacks</sub> | CVPR'24 | [📄](https://arxiv.org/abs/2312.03777) | — |
 | 2024 | Arch & Prompt | Improving adversarial robustness in vision-language models with architecture and prompt design <br/><sub>architecture & prompt-design effects</sub> | EMNLP-F'24 | [📄](https://aclanthology.org/2024.findings-emnlp.990/) | — |
 | 2025 | I-ScienceQA | On the robustness of multimodal language model towards distractions <br/><sub>visual/textual distraction benchmark (8.1k)</sub> | arXiv'25 | [📄](https://arxiv.org/abs/2502.09818) | — |
-| 2026 | TTA-VLM | The illusion of progress? a critical look at test-time adaptation for vision-language models | NeurIPS'26 | [📄](https://arxiv.org/abs/2506.24000) | [💻](https://github.com/TomSheng21/tta-vlm) |
+| 2025 | TTA-VLM | The illusion of progress? a critical look at test-time adaptation for vision-language models | NeurIPS'25 | [📄](https://arxiv.org/abs/2506.24000) | [💻](https://github.com/TomSheng21/tta-vlm) |
 | 2025 | Driving-Robustness | Towards Trustworthy Autonomous Vehicles with Vision-Language Models under Targeted and Untargeted Adversarial Attacks <br/><sub>autonomous-driving VQA under attack</sub> | CVPRW'25 | [📄](https://doi.org/10.1109/CVPRW67362.2025.00067) | — |
 | 2026 | Modality-Vuln | Understanding Modality-Specific Vulnerabilities in Vision--Language Models Under Adversarial Attacks | AI'26 | [📄](https://doi.org/10.3390/ai7040135) | — |
 
