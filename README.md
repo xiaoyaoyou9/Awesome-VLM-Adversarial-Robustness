@@ -374,6 +374,7 @@ Generative MLLMs add a three-stage attack surface (vision encoder → alignment 
 | 2024 | MirrorCheck | Mirrorcheck: Efficient adversarial defense for vision-language models <br/><sub>T2I-regeneration detection (training-free)</sub> | NeurIPS'24 | [📄](https://arxiv.org/abs/2406.09250) | — |
 | 2026 | PDA | PDA: Text-Augmented Defense Framework for Robust Vision-Language Models against Adversarial Image Attacks <br/><sub>query-level paraphrase aggregation</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2604.01010) | — |
 | 2026 | OCRA | ORCA: An Agentic Reasoning Framework for Hallucination and Adversarial Robustness in Vision-Language Models <br/><sub>agentic cross-validation</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2509.15435) | — |
+| 2026 | SAEgis | Sparse Autoencoders as Plug-and-Play Firewalls for Adversarial Attack Detection in VLMs <br/><sub>→ MirrorCheck; SAE-latent detection on a frozen VLM, no adversarial training</sub> | arXiv'26 | [📄](https://arxiv.org/abs/2605.07447) | — |
 
 #### Analysis & Benchmarks
 
